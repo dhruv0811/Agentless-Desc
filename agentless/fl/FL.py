@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+import os
+import json
+from functools import lru_cache
 
 from agentless.repair.repair import construct_topn_file_context
 from agentless.util.compress_file import get_skeleton
@@ -26,6 +29,9 @@ class FL(ABC):
 
 
 class LLMFL(FL):
+    # File description cache to store descriptions by repository and file path
+    file_descriptions_cache = {}
+    
     obtain_relevant_files_prompt = """
 Please look through the following GitHub problem description and Repository structure and provide a list of files that one would need to edit to fix the problem.
 
@@ -34,8 +40,8 @@ Please look through the following GitHub problem description and Repository stru
 
 ###
 
-### Repository Structure ###
-{structure}
+### Repository Structure with File Descriptions ###
+{structure_with_descriptions}
 
 ###
 
@@ -57,8 +63,8 @@ Note that irrelevant folders are those that do not need to be modified and are s
 
 ###
 
-### Repository Structure ###
-{structure}
+### Repository Structure with File Descriptions ###
+{structure_with_descriptions}
 
 ###
 
@@ -80,6 +86,14 @@ folder4/folder5/
 """
     file_content_in_block_template = """
 ### File: {file_name} ###
+```python
+{file_content}
+```
+"""
+
+    generate_file_description_prompt = """
+Please provide a concise two-sentence description of the following Python file based on its content. The description should summarize the purpose and main functionality of the file.
+
 ```python
 {file_content}
 ```
@@ -238,6 +252,110 @@ Return just the locations wrapped with ```.
         self.model_name = model_name
         self.backend = backend
         self.logger = logger
+        
+    def _get_file_description_cache_key(self, repo, file_path):
+        """Generate a unique key for caching file descriptions."""
+        return f"{repo}:{file_path}"
+        
+    def _generate_file_description(self, file_path, file_content):
+        """Generate a description for a file using the language model."""
+        from agentless.util.model import make_model
+        
+        self.logger.info(f"Generating description for file: {file_path}")
+        
+        message = self.generate_file_description_prompt.format(
+            file_content=file_content
+        ).strip()
+        
+        model = make_model(
+            model=self.model_name,
+            backend=self.backend,
+            logger=self.logger,
+            max_tokens=100,  # Short description
+            temperature=0,
+            batch_size=1,
+        )
+        
+        traj = model.codegen(message, num_samples=1)[0]
+        description = traj["response"].strip()
+        
+        # Ensure the description is not too long
+        if len(description.split('.')) > 2:
+            sentences = description.split('.')
+            description = '.'.join(sentences[:2]) + '.'
+            
+        return description
+    
+    def _get_file_description(self, repo, file_path, file_content):
+        """Get a file description, either from cache or by generating it."""
+        cache_key = self._get_file_description_cache_key(repo, file_path)
+        
+        # Check if description exists in the cache
+        if cache_key in self.file_descriptions_cache:
+            self.logger.info(f"Using cached description for {file_path}")
+            return self.file_descriptions_cache[cache_key]
+        
+        # Generate a description
+        description = self._generate_file_description(file_path, file_content)
+        
+        # Cache the description
+        self.file_descriptions_cache[cache_key] = description
+        
+        # Optionally save to disk for persistence
+        cache_dir = os.path.join("cache", "file_descriptions")
+        os.makedirs(cache_dir, exist_ok=True)
+        cache_file = os.path.join(cache_dir, "descriptions.json")
+        
+        try:
+            if os.path.exists(cache_file):
+                with open(cache_file, 'r') as f:
+                    disk_cache = json.load(f)
+            else:
+                disk_cache = {}
+                
+            disk_cache[cache_key] = description
+            
+            with open(cache_file, 'w') as f:
+                json.dump(disk_cache, f, indent=2)
+        except Exception as e:
+            self.logger.warning(f"Failed to save file description to disk: {e}")
+        
+        return description
+    
+    def _build_structure_with_descriptions(self, structure):
+        """Add file descriptions to the repository structure representation."""
+        import re
+        
+        # Try to extract repo name from instance_id for cache key
+        repo = self.instance_id.split('__')[0] if '__' in self.instance_id else self.instance_id
+        
+        # Get all files in the repository
+        files, _, _ = get_full_file_paths_and_classes_and_functions(structure)
+        
+        # Basic structure representation
+        basic_structure = show_project_structure(structure).strip()
+        
+        # Enhance with descriptions
+        structure_with_descriptions = basic_structure
+        
+        for file_content in files:
+            file_path = file_content[0]
+            content = "\n".join(file_content[1])
+            
+            if file_path.endswith(".py"):  # Only process Python files
+                description = self._get_file_description(repo, file_path, content)
+                
+                # Add the description after the file name in the structure
+                file_name = file_path.split('/')[-1]
+                file_name_pattern = r'(\s+' + re.escape(file_name) + r')(\n)'
+                replacement = r'\1 - ' + description + r'\2'
+                structure_with_descriptions = re.sub(
+                    file_name_pattern, 
+                    replacement, 
+                    structure_with_descriptions
+                )
+        
+        return structure_with_descriptions
 
     def _parse_model_return_lines(self, content: str) -> list[str]:
         if content:
@@ -247,9 +365,11 @@ Return just the locations wrapped with ```.
         from agentless.util.api_requests import num_tokens_from_messages
         from agentless.util.model import make_model
 
+        structure_with_descriptions = self._build_structure_with_descriptions(self.structure)
+        
         message = self.obtain_irrelevant_files_prompt.format(
             problem_statement=self.problem_statement,
-            structure=show_project_structure(self.structure).strip(),
+            structure_with_descriptions=structure_with_descriptions,
         ).strip()
         self.logger.info(f"prompting with message:\n{message}")
         self.logger.info("=" * 80)
@@ -316,9 +436,11 @@ Return just the locations wrapped with ```.
 
         found_files = []
 
+        structure_with_descriptions = self._build_structure_with_descriptions(self.structure)
+        
         message = self.obtain_relevant_files_prompt.format(
             problem_statement=self.problem_statement,
-            structure=show_project_structure(self.structure).strip(),
+            structure_with_descriptions=structure_with_descriptions,
         ).strip()
         self.logger.info(f"prompting with message:\n{message}")
         self.logger.info("=" * 80)
