@@ -577,7 +577,8 @@ def main():
             "deepseek-coder",
             "gpt-4o-mini-2024-07-18",
             "claude-3-5-sonnet-20241022",
-            "meta-llama/Llama-3.1-70B-Instruct"
+            "meta-llama/Llama-3.1-70B-Instruct",
+            "meta-llama/Llama-3.1-8B"
         ],
     )
     parser.add_argument(
