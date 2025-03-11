@@ -1,6 +1,11 @@
 import json
+import os
 from abc import ABC, abstractmethod
 from typing import List
+
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
+from threading import Thread
 
 from agentless.util.api_requests import (
     create_anthropic_config,
@@ -384,6 +389,127 @@ class DeepSeekChatDecoder(DecoderBase):
         return False
 
 
+class HuggingFaceChatDecoder(DecoderBase):
+    """Decoder for Hugging Face models using the transformers library."""
+    
+    def __init__(self, name: str, logger, **kwargs) -> None:
+        super().__init__(name, logger, **kwargs)
+        
+        # Initialize tokenizer and model from Hugging Face
+        self.logger.info(f"Loading Hugging Face model: {name}")
+        try:
+            self.tokenizer = AutoTokenizer.from_pretrained(name)
+            self.model = AutoModelForCausalLM.from_pretrained(
+                name,
+                torch_dtype=torch.float16,  # Use fp16 for efficiency
+                device_map="auto",         
+                trust_remote_code=True     # Required for some models
+            )
+            self.logger.info(f"Successfully loaded {name}")
+        except Exception as e:
+            self.logger.error(f"Error loading model {name}: {e}")
+            raise
+
+        # Set padding settings
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+            
+    def _format_prompt(self, message: str) -> str:
+        """Format the prompt based on the model architecture."""
+        if "llama" in self.name.lower() or "mistral" in self.name.lower():
+            if isinstance(message, list):
+                formatted_prompt = ""
+                for msg in message:
+                    role = msg.get("role", "user")
+                    content = msg.get("content", "")
+                    if role == "system":
+                        formatted_prompt += f"<s>[INST] <<SYS>>\n{content}\n<</SYS>>\n\n"
+                    elif role == "user":
+                        formatted_prompt += f"[INST] {content} [/INST]"
+                    elif role == "assistant":
+                        formatted_prompt += f" {content} </s>"
+                return formatted_prompt
+            else:
+                return f"<s>[INST] {message} [/INST]"
+        
+        elif "gemma" in self.name.lower():
+            return f"<start_of_turn>user\n{message}<end_of_turn>\n<start_of_turn>model\n"
+            
+        elif "mpt" in self.name.lower():
+            return f"<|im_start|>user\n{message}<|im_end|>\n<|im_start|>assistant\n"
+        else:
+            return f"User: {message}\n\nAssistant:"
+            
+    def _count_tokens(self, text: str) -> int:
+        """Count the number of tokens in the text."""
+        return len(self.tokenizer.encode(text))
+    
+    def codegen(
+        self, message: str, num_samples: int = 1, prompt_cache: bool = False
+    ) -> List[dict]:
+        if self.temperature == 0:
+            assert num_samples == 1
+        
+        trajs = []
+        
+        formatted_prompt = self._format_prompt(message)
+        
+        prompt_tokens = self._count_tokens(formatted_prompt)
+        
+        for _ in range(num_samples):
+            try:
+                inputs = self.tokenizer(formatted_prompt, return_tensors="pt").to(self.model.device)
+                
+                gen_kwargs = {
+                    "max_new_tokens": self.max_new_tokens,
+                    "temperature": max(self.temperature, 0.01),  # Avoid exactly 0 temperature
+                    "do_sample": self.temperature > 0,
+                    "top_p": 0.95,
+                    "repetition_penalty": 1.1,
+                }
+                
+                with torch.no_grad():
+                    generated_ids = self.model.generate(
+                        inputs.input_ids, 
+                        attention_mask=inputs.attention_mask,
+                        **gen_kwargs
+                    )
+                
+                generated_text = self.tokenizer.decode(
+                    generated_ids[0][inputs.input_ids.shape[1]:], 
+                    skip_special_tokens=True
+                )
+                
+                if "llama" in self.name.lower() or "mistral" in self.name.lower():
+                    if "</s>" in generated_text:
+                        generated_text = generated_text.split("</s>")[0]
+                
+                completion_tokens = self._count_tokens(generated_text)
+                
+                trajs.append({
+                    "response": generated_text.strip(),
+                    "usage": {
+                        "completion_tokens": completion_tokens,
+                        "prompt_tokens": prompt_tokens,
+                    },
+                })
+                
+            except Exception as e:
+                self.logger.error(f"Error generating with Hugging Face model: {e}")
+                trajs.append({
+                    "response": "",
+                    "usage": {
+                        "completion_tokens": 0,
+                        "prompt_tokens": prompt_tokens,
+                    },
+                })
+        
+        return trajs
+
+    def is_direct_completion(self) -> bool:
+        return False
+
+
 def make_model(
     model: str,
     backend: str,
@@ -410,6 +536,14 @@ def make_model(
         )
     elif backend == "deepseek":
         return DeepSeekChatDecoder(
+            name=model,
+            logger=logger,
+            batch_size=batch_size,
+            max_new_tokens=max_tokens,
+            temperature=temperature,
+        )
+    elif backend == "huggingface":
+        return HuggingFaceChatDecoder(
             name=model,
             logger=logger,
             batch_size=batch_size,
