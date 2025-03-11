@@ -395,7 +395,7 @@ class HuggingFaceChatDecoder(DecoderBase):
     def __init__(self, name: str, logger, **kwargs) -> None:
         super().__init__(name, logger, **kwargs)
 
-        hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")
+        hf_token = os.environ.get("HF_API_KEY") or os.environ.get("HUGGINGFACE_TOKEN")
         if hf_token:
             self.logger.info("Using Hugging Face token from environment")
         else:
@@ -406,16 +406,14 @@ class HuggingFaceChatDecoder(DecoderBase):
         try:
             self.tokenizer = AutoTokenizer.from_pretrained(
                 name,
-                token=hf_token,
-                use_auth_token=hf_token
+                token=hf_token
             )
             self.model = AutoModelForCausalLM.from_pretrained(
                 name,
                 torch_dtype=torch.float16,  # Use fp16 for efficiency
                 device_map="auto",         
                 trust_remote_code=True,     # Required for some models
-                token=hf_token,
-                use_auth_token=hf_token
+                token=hf_token
             )
             self.logger.info(f"Successfully loaded {name}")
         except Exception as e:
