@@ -252,22 +252,10 @@ Return just the locations wrapped with ```.
         self.model_name = model_name
         self.backend = backend
         self.logger = logger
-        
-    def _get_file_description_cache_key(self, repo, file_path):
-        """Generate a unique key for caching file descriptions."""
-        return f"{repo}:{file_path}"
-        
-    def _generate_file_description(self, file_path, file_content):
-        """Generate a description for a file using the language model."""
+
+        # Short Description Model 
         from agentless.util.model import make_model
-        
-        self.logger.info(f"Generating description for file: {file_path}")
-        
-        message = self.generate_file_description_prompt.format(
-            file_content=file_content
-        ).strip()
-        
-        model = make_model(
+        self.desc_model = make_model(
             model=self.model_name,
             backend=self.backend,
             logger=self.logger,
@@ -276,7 +264,20 @@ Return just the locations wrapped with ```.
             batch_size=1,
         )
         
-        traj = model.codegen(message, num_samples=1)[0]
+    def _get_file_description_cache_key(self, repo, file_path):
+        """Generate a unique key for caching file descriptions."""
+        return f"{repo}:{file_path}"
+        
+    def _generate_file_description(self, file_path, file_content):
+        """Generate a description for a file using the language model."""
+        
+        self.logger.info(f"Generating description for file: {file_path}")
+        
+        message = self.generate_file_description_prompt.format(
+            file_content=file_content
+        ).strip()
+        
+        traj = self.desc_model.codegen(message, num_samples=1)[0]
         description = traj["response"].strip()
         
         # Ensure the description is not too long
