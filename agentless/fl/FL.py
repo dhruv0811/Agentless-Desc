@@ -18,10 +18,11 @@ MAX_CONTEXT_LENGTH = 128000
 
 
 class FL(ABC):
-    def __init__(self, instance_id, structure, problem_statement, **kwargs):
+    def __init__(self, instance_id, structure, problem_statement, descriptions, **kwargs):
         self.structure = structure
         self.instance_id = instance_id
         self.problem_statement = problem_statement
+        self.descriptions = descriptions
 
     @abstractmethod
     def localize(self, top_n=1, mock=False) -> tuple[list, list, list, any]:
@@ -32,7 +33,7 @@ class LLMFL(FL):
     # File description cache to store descriptions by repository and file path
     file_descriptions_cache = {}
     
-    obtain_relevant_files_prompt = """
+    obtain_relevant_files_prompt_description = """
 Please look through the following GitHub problem description and Repository structure and provide a list of files that one would need to edit to fix the problem.
 
 ### GitHub Problem Description ###
@@ -54,7 +55,29 @@ file2.py
 ```
 """
 
-    obtain_irrelevant_files_prompt = """
+    obtain_relevant_files_prompt = """
+Please look through the following GitHub problem description and Repository structure and provide a list of files that one would need to edit to fix the problem.
+
+### GitHub Problem Description ###
+{problem_statement}
+
+###
+
+### Repository Structure ###
+{structure}
+
+###
+
+Please only provide the full path and return at most 5 files.
+The returned files should be separated by new lines ordered by most to least important and wrapped with ```
+For example:
+```
+file1.py
+file2.py
+```
+"""
+
+    obtain_irrelevant_files_prompt_description = """
 Please look through the following GitHub problem description and Repository structure and provide a list of folders that are irrelevant to fixing the problem.
 Note that irrelevant folders are those that do not need to be modified and are safe to ignored when trying to solve this problem.
 
@@ -65,6 +88,31 @@ Note that irrelevant folders are those that do not need to be modified and are s
 
 ### Repository Structure with File Descriptions ###
 {structure_with_descriptions}
+
+###
+
+Please only provide the full path.
+Remember that any subfolders will be considered as irrelevant if you provide the parent folder.
+Please ensure that the provided irrelevant folders do not include any important files needed to fix the problem
+The returned folders should be separated by new lines and wrapped with ```
+For example:
+```
+folder1/
+folder2/folder3/
+folder4/folder5/
+```
+"""
+    obtain_irrelevant_files_prompt = """
+Please look through the following GitHub problem description and Repository structure and provide a list of folders that are irrelevant to fixing the problem.
+Note that irrelevant folders are those that do not need to be modified and are safe to ignored when trying to solve this problem.
+
+### GitHub Problem Description ###
+{problem_statement}
+
+###
+
+### Repository Structure ###
+{structure}
 
 ###
 
@@ -97,6 +145,7 @@ Please provide a concise two-sentence description of the following Python file b
 ```python
 {file_content}
 ```
+Provide only the description as the output, within [ANS] [/ANS] tags. Do not give any other output.
 """
 
     obtain_relevant_code_combine_top_n_prompt = """
@@ -245,13 +294,15 @@ Return just the locations wrapped with ```.
         model_name,
         backend,
         logger,
+        descriptions,
         **kwargs,
     ):
-        super().__init__(instance_id, structure, problem_statement)
+        super().__init__(instance_id, structure, problem_statement, descriptions)
         self.max_tokens = 300
         self.model_name = model_name
         self.backend = backend
         self.logger = logger
+        self.descriptions = descriptions
 
         # Short Description Model 
         from agentless.util.model import make_model
@@ -366,12 +417,19 @@ Return just the locations wrapped with ```.
         from agentless.util.api_requests import num_tokens_from_messages
         from agentless.util.model import make_model
 
-        structure_with_descriptions = self._build_structure_with_descriptions(self.structure)
+        if self.descriptions: structure_with_descriptions = self._build_structure_with_descriptions(self.structure)
         
-        message = self.obtain_irrelevant_files_prompt.format(
+        if self.descriptions:
+            message = self.obtain_irrelevant_files_prompt_description.format(
             problem_statement=self.problem_statement,
             structure_with_descriptions=structure_with_descriptions,
-        ).strip()
+            ).strip()
+        else:
+            message = self.obtain_irrelevant_files_prompt.format(
+             problem_statement=self.problem_statement,
+             structure=show_project_structure(self.structure).strip(),
+            ).strip()
+
         self.logger.info(f"prompting with message:\n{message}")
         self.logger.info("=" * 80)
 
@@ -436,13 +494,22 @@ Return just the locations wrapped with ```.
         from agentless.util.model import make_model
 
         found_files = []
+        print("")
 
-        structure_with_descriptions = self._build_structure_with_descriptions(self.structure)
+        if self.descriptions: structure_with_descriptions = self._build_structure_with_descriptions(self.structure)
         
-        message = self.obtain_relevant_files_prompt.format(
+        if self.descriptions: 
+            print("Using Structure with Descriptions")
+            message = self.obtain_relevant_files_prompt_description.format(
             problem_statement=self.problem_statement,
             structure_with_descriptions=structure_with_descriptions,
-        ).strip()
+            ).strip()
+        else:
+            print("Using Structure without Descriptions")
+            message = self.obtain_relevant_files_prompt.format(
+            problem_statement=self.problem_statement,
+            structure=show_project_structure(self.structure).strip(),
+            ).strip()
         self.logger.info(f"prompting with message:\n{message}")
         self.logger.info("=" * 80)
         if mock:

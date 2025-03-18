@@ -7,6 +7,10 @@ from threading import Lock
 from datasets import load_dataset
 from tqdm import tqdm
 
+import sys
+# Add parent directory to path to make 'fl' importable
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from agentless.fl.FL import LLMFL
 from agentless.util.preprocess_data import (
     check_contains_valid_loc,
@@ -66,6 +70,7 @@ def localize_irrelevant_instance(
             args.model,
             args.backend,
             logger,
+            args.descriptions
         )
         found_files, additional_artifact_loc_file, file_traj = fl.localize_irrelevant(
             mock=args.mock
@@ -144,6 +149,7 @@ def localize_instance(
             args.model,
             args.backend,
             logger,
+            args.descriptions
         )
         found_files, additional_artifact_loc_file, file_traj = fl.localize(
             mock=args.mock
@@ -181,6 +187,7 @@ def localize_instance(
                     args.model,
                     args.backend,
                     logger,
+                    args.descriptions
                 )
                 additional_artifact_loc_related = []
                 found_related_locs = {}
@@ -281,6 +288,7 @@ def localize_instance(
                     args.model,
                     args.backend,
                     logger,
+                    args.descriptions
                 )
                 if not args.direct_edit_loc:
                     coarse_found_locs = found_related_locs
@@ -397,6 +405,7 @@ def localize_instance(
 
 def localize_irrelevant(args):
     swe_bench_data = load_dataset(args.dataset, split="test")
+    
     existing_instance_ids = (
         load_existing_instance_ids(args.output_file) if args.skip_existing else set()
     )
@@ -431,6 +440,13 @@ def localize_irrelevant(args):
 
 def localize(args):
     swe_bench_data = load_dataset(args.dataset, split="test")
+
+    # Use only subset of examples if the flag is set
+    if args.use_subset:
+        # Take first 5 examples
+        swe_bench_data = swe_bench_data.select(range(min(5, len(swe_bench_data))))
+        print(f"Running on a subset of {len(swe_bench_data)} examples")
+
     start_file_locs = load_jsonl(args.start_file) if args.start_file else None
     existing_instance_ids = (
         load_existing_instance_ids(args.output_file) if args.skip_existing else set()
@@ -568,6 +584,10 @@ def main():
     parser.add_argument(
         "--mock", action="store_true", help="Mock run to compute prompt tokens."
     )
+
+    parser.add_argument(
+        "--descriptions", action="store_true", help="Add Descriptions"
+    )
     parser.add_argument(
         "--model",
         type=str,
@@ -594,8 +614,16 @@ def main():
         choices=["princeton-nlp/SWE-bench_Lite", "princeton-nlp/SWE-bench_Verified"],
         help="Current supported dataset for evaluation",
     )
+    parser.add_argument(
+        "--use_subset", 
+        action="store_true", 
+        help="Use only a subset of 5 examples from the dataset"
+    )
 
     args = parser.parse_args()
+    print("Using Descriptions: ", args.descriptions)
+    if args.use_subset:
+        print("Running on a subset of 5 examples")
     args.output_file = os.path.join(args.output_folder, args.output_file)
     check_valid_args(args)
 

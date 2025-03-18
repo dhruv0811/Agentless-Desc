@@ -394,6 +394,7 @@ class HuggingFaceChatDecoder(DecoderBase):
     
     def __init__(self, name: str, logger, **kwargs) -> None:
         super().__init__(name, logger, **kwargs)
+        self.temperature = 0.8
 
         hf_token = os.environ.get("HF_API_KEY") or os.environ.get("HUGGINGFACE_TOKEN")
         if hf_token:
@@ -433,7 +434,7 @@ class HuggingFaceChatDecoder(DecoderBase):
                     role = msg.get("role", "user")
                     content = msg.get("content", "")
                     if role == "system":
-                        formatted_prompt += f"<s>[INST] <<SYS>>\n{content}\n<</SYS>>\n\n"
+                        formatted_prompt += f"<s>[INST] <<SYS>>\n{content}\n<</SYS>> [/INST]\n\n"
                     elif role == "user":
                         formatted_prompt += f"[INST] {content} [/INST]"
                     elif role == "assistant":
@@ -457,27 +458,44 @@ class HuggingFaceChatDecoder(DecoderBase):
     def codegen(
         self, message: str, num_samples: int = 1, prompt_cache: bool = False
     ) -> List[dict]:
+        self.temperature = 0.3
+        self.logger.info(f"Starting codegen with message length: {len(message)}")
+        self.logger.info(f"Generation parameters: num_samples={num_samples}, temperature={self.temperature}")
+        
         if self.temperature == 0:
             assert num_samples == 1
         
         trajs = []
         
         formatted_prompt = self._format_prompt(message)
+        self.logger.info(f"Formatted prompt: {formatted_prompt[:100]}... (truncated)")
         
         prompt_tokens = self._count_tokens(formatted_prompt)
+        self.logger.info(f"Prompt token count: {prompt_tokens}")
         
-        for _ in range(num_samples):
+        for sample_idx in range(num_samples):
+            self.logger.info(f"Generating sample {sample_idx + 1}/{num_samples}")
             try:
-                inputs = self.tokenizer(formatted_prompt, return_tensors="pt").to(self.model.device)
+                self.logger.info("Tokenizing input...")
+                inputs = self.tokenizer(formatted_prompt, return_tensors="pt")
+                self.logger.info(f"Input shape: {inputs.input_ids.shape}")
+                
+                # Move inputs to the correct device
+                inputs = inputs.to(self.model.device)
+                self.logger.info(f"Using device: {self.model.device}")
                 
                 gen_kwargs = {
-                    "max_new_tokens": self.max_new_tokens,
+                    "max_new_tokens": 256,
                     "temperature": max(self.temperature, 0.01),  # Avoid exactly 0 temperature
                     "do_sample": self.temperature > 0,
                     "top_p": 0.95,
                     "repetition_penalty": 1.1,
+                    "eos_token_id": None,  # Temporarily disable EOS stopping
+                    "pad_token_id": self.tokenizer.pad_token_id,
                 }
+                self.logger.info(f"Generation kwargs: {gen_kwargs}")
                 
+                self.logger.info("Starting generation...")
                 with torch.no_grad():
                     generated_ids = self.model.generate(
                         inputs.input_ids, 
@@ -485,19 +503,58 @@ class HuggingFaceChatDecoder(DecoderBase):
                         **gen_kwargs
                     )
                 
-                generated_text = self.tokenizer.decode(
-                    generated_ids[0][inputs.input_ids.shape[1]:], 
-                    skip_special_tokens=True
-                )
+                self.logger.info(f"Generation complete. Output shape: {generated_ids.shape}")
                 
+                # Decode the entire sequence first to check
+                full_text = self.tokenizer.decode(generated_ids[0], skip_special_tokens=True)
+                self.logger.info(f"Full decoded text: {full_text[:100]}... (truncated)")
+                
+                # Now get just the new tokens
+                input_length = inputs.input_ids.shape[1]
+                self.logger.info(f"Input length: {input_length}, Generated length: {generated_ids.shape[1]}")
+                
+                if input_length >= generated_ids.shape[1]:
+                    self.logger.warning(f"No new tokens generated! Input length: {input_length}, Output length: {generated_ids.shape[1]}")
+                    generated_text = ""
+                else:
+                    generated_text = self.tokenizer.decode(
+                        generated_ids[0][input_length:], 
+                        skip_special_tokens=True
+                    )
+                
+                self.logger.info(f"New tokens decoded text (before processing): '{generated_text}'")
+                
+                # Log the raw token IDs for debugging
+                self.logger.info(f"Raw new token IDs: {generated_ids[0][input_length:].tolist()}")
+                
+                # Model-specific processing
                 if "llama" in self.name.lower() or "mistral" in self.name.lower():
+                    self.logger.info("Applying Llama/Mistral-specific processing")
                     if "</s>" in generated_text:
+                        old_text = generated_text
                         generated_text = generated_text.split("</s>")[0]
+                        self.logger.info(f"Split on </s>: '{old_text}' -> '{generated_text}'")
                 
                 completion_tokens = self._count_tokens(generated_text)
+                self.logger.info(f"Completion token count: {completion_tokens}")
+                
+                final_response = generated_text.strip()
+                if "[ANS]" not in final_response:
+                    final_response = ""
+                else:
+                    after_start = final_response.split("[ANS]", 1)[1]
+                    if "[/ANS]" in after_start:
+                        # Extract content up to [/ANS]
+                        final_response = after_start.split("[/ANS]", 1)[0]
+                    else:
+                        # Take everything after [ANS] since there's no closing tag
+                        final_response = after_start
+                    final_response = final_response.strip()
+    
+                self.logger.info(f"Final response (after strip): '{final_response}'")
                 
                 trajs.append({
-                    "response": generated_text.strip(),
+                    "response": final_response,
                     "usage": {
                         "completion_tokens": completion_tokens,
                         "prompt_tokens": prompt_tokens,
@@ -505,7 +562,8 @@ class HuggingFaceChatDecoder(DecoderBase):
                 })
                 
             except Exception as e:
-                self.logger.error(f"Error generating with Hugging Face model: {e}")
+                self.logger.error(f"Error generating with Hugging Face model: {e}", exc_info=True)
+                self.logger.error(f"Traceback: {traceback.format_exc()}")
                 trajs.append({
                     "response": "",
                     "usage": {
@@ -514,6 +572,7 @@ class HuggingFaceChatDecoder(DecoderBase):
                     },
                 })
         
+        self.logger.info(f"Generation complete, returning {len(trajs)} trajectories")
         return trajs
 
     def is_direct_completion(self) -> bool:

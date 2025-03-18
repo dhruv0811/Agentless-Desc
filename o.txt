@@ -1,0 +1,7 @@
+Using Descriptions:  True
+Running on a subset of 5 examples
+Running on a subset of 5 examples
+Cloning repository from https://github.com/astropy/astropy.git to playground/2ccd5bc2-4713-4041-b4eb-5128cf5161e3/astropy...
+Repository cloned successfully.
+Checking out commit d16bfe05a744909de4b27f5875fe0d4ed41ce607 in repository at playground/2ccd5bc2-4713-4041-b4eb-5128cf5161e3/astropy...
+Commit checked out successfully.
