@@ -598,7 +598,7 @@ def main():
             "gpt-4o-mini-2024-07-18",
             "claude-3-5-sonnet-20241022",
             "meta-llama/Llama-3.1-70B-Instruct",
-            "meta-llama/Llama-3.1-8B"
+            "meta-llama/Llama-3.1-8B-Instruct"
         ],
     )
     parser.add_argument(
