@@ -1,0 +1,634 @@
+{
+  "total_instances": 50,
+  "total_predictions": 33,
+  "total_gold_files": 62,
+  "total_correct": 9,
+  "instance_metrics": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "predicted_files": [
+        "astropy/modeling/separable.py",
+        "astropy/modeling/models.py",
+        "astropy/modeling/core.py",
+        "astropy/modeling/functional_models.py"
+      ],
+      "gold_files": [
+        "astropy/modeling/separable.py"
+      ],
+      "correct_files": [
+        "astropy/modeling/separable.py"
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-13033",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/timeseries/core.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-13236",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/table/table.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-13398",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/coordinates/builtin_frames/__init__.py",
+        "astropy/coordinates/builtin_frames/intermediate_rotation_transforms.py",
+        "astropy/coordinates/builtin_frames/itrs.py",
+        "astropy/coordinates/builtin_frames/itrs_observed_transforms.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-13453",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/io/ascii/html.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-13579",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/wcs/wcsapi/wrappers/sliced_wcs.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-13977",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/units/quantity.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-14096",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/coordinates/sky_coordinate.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-14182",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "astropy/io/ascii/rst.py",
+        "astropy/io/ascii/core.py",
+        "astropy/table/connect.py",
+        "astropy/io/ascii/ui.py",
+        "astropy/io/ascii/__init__.py"
+      ],
+      "gold_files": [
+        "astropy/io/ascii/rst.py"
+      ],
+      "correct_files": [
+        "astropy/io/ascii/rst.py"
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-14309",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/io/fits/connect.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "astropy/io/ascii/qdp.py",
+        "astropy/io/ascii/core.py",
+        "astropy/io/ascii/basic.py",
+        "astropy/io/ascii/misc.py",
+        "astropy/io/ascii/fastbasic.py"
+      ],
+      "gold_files": [
+        "astropy/io/ascii/qdp.py"
+      ],
+      "correct_files": [
+        "astropy/io/ascii/qdp.py"
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-14369",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/units/format/cds.py",
+        "astropy/units/format/cds_parsetab.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-14508",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/io/fits/card.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-14539",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/io/fits/diff.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-14598",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/io/fits/card.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "astropy/nddata/nddata.py",
+        "astropy/nddata/nddata_base.py",
+        "astropy/nddata/mixins/ndarithmetic.py",
+        "astropy/nddata/nddata_withmixins.py",
+        "astropy/nddata/compat.py"
+      ],
+      "gold_files": [
+        "astropy/nddata/mixins/ndarithmetic.py"
+      ],
+      "correct_files": [
+        "astropy/nddata/mixins/ndarithmetic.py"
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-7166",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/utils/misc.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-7336",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/units/decorators.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-7606",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/units/core.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-7671",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/utils/introspection.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-8707",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/io/fits/card.py",
+        "astropy/io/fits/header.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "astropy__astropy-8872",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "astropy/units/quantity.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-10097",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/core/validators.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-10554",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/models/sql/compiler.py",
+        "django/db/models/sql/query.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-10880",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/models/aggregates.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-10914",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "django/core/files/storage.py",
+        "django/core/files/uploadhandler.py",
+        "django/conf/global_settings.py",
+        "django/core/files/uploadedfile.py",
+        "django/core/files/temp.py"
+      ],
+      "gold_files": [
+        "django/conf/global_settings.py"
+      ],
+      "correct_files": [
+        "django/conf/global_settings.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-10973",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/backends/postgresql/client.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-10999",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/utils/dateparse.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11066",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/contrib/contenttypes/management/__init__.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11087",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/models/deletion.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11095",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/contrib/admin/options.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11099",
+      "precision": 1.0,
+      "recall": 2.0,
+      "f1": 1.3333333333333333,
+      "predicted_files": [
+        "django/contrib/auth/validators.py",
+        "django/contrib/auth/validators.py"
+      ],
+      "gold_files": [
+        "django/contrib/auth/validators.py"
+      ],
+      "correct_files": [
+        "django/contrib/auth/validators.py",
+        "django/contrib/auth/validators.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11119",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/template/engine.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11133",
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "predicted_files": [
+        "django/http/response.py",
+        "django/utils/http.py"
+      ],
+      "gold_files": [
+        "django/http/response.py"
+      ],
+      "correct_files": [
+        "django/http/response.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11138",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/backends/mysql/operations.py",
+        "django/db/backends/oracle/operations.py",
+        "django/db/backends/sqlite3/base.py",
+        "django/db/backends/sqlite3/operations.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11141",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/migrations/loader.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11149",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/contrib/admin/options.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11163",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/forms/models.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11179",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "django/db/models/deletion.py",
+        "django/db/models/base.py",
+        "django/db/models/manager.py",
+        "django/db/models/query.py",
+        "django/db/models/options.py"
+      ],
+      "gold_files": [
+        "django/db/models/deletion.py"
+      ],
+      "correct_files": [
+        "django/db/models/deletion.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11206",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/utils/numberformat.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11211",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11239",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/backends/postgresql/client.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11265",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11276",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/utils/html.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11292",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/core/management/base.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11299",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11333",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/urls/base.py",
+        "django/urls/resolvers.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11400",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/contrib/admin/filters.py",
+        "django/db/models/fields/__init__.py",
+        "django/db/models/fields/reverse_related.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11433",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/forms/models.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11451",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "predicted_files": [],
+      "gold_files": [
+        "django/contrib/auth/backends.py"
+      ],
+      "correct_files": []
+    }
+  ],
+  "macro_precision": 0.055,
+  "macro_recall": 0.18,
+  "macro_f1": 0.08133333333333333,
+  "micro_precision": 0.2727272727272727,
+  "micro_recall": 0.14516129032258066,
+  "micro_f1": 0.18947368421052632
+}

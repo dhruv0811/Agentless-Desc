@@ -88,7 +88,7 @@ def compute_metrics(predictions, gold_standards):
 def main():
     parser = argparse.ArgumentParser(description='Compare file retrieval predictions with gold standard')
     parser.add_argument('--predictions', default='/home/dhruvgu2/Agentless/results/swe-bench-lite/file_level/loc_outputs.jsonl', help='Path to predictions JSONL file')
-    parser.add_argument('--output', default='./results/retrieval_metrics_gpt4o_baseline.json', help='Output JSON file path')
+    parser.add_argument('--output', default='./results/retrieval_metrics_gpt4o_desc.json', help='Output JSON file path')
     parser.add_argument('--num_samples', type=int, default=50, help='Number of samples to use from the dataset')
     args = parser.parse_args()
     
