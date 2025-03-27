@@ -98,7 +98,7 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description='Filter entries with non-empty predicted_files')
-    parser.add_argument('--input_folder', default='./results', help='Folder containing JSON files to process')
+    parser.add_argument('--input_folder', default='./orig_results', help='Folder containing JSON files to process')
     parser.add_argument('-o', '--output_folder', default='./filtered_results', help='Output folder for filtered files')
     
     args = parser.parse_args()

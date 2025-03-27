@@ -1,0 +1,329 @@
+{
+  "total_instances": 500,
+  "total_predictions": 76,
+  "total_gold_files": 623,
+  "total_correct": 15,
+  "instance_metrics": [
+    {
+      "instance_id": "astropy__astropy-12907",
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "predicted_files": [
+        "astropy/modeling/separable.py",
+        "astropy/modeling/core.py",
+        "astropy/modeling/models.py",
+        "astropy/modeling/parameters.py"
+      ],
+      "gold_files": [
+        "astropy/modeling/separable.py"
+      ],
+      "correct_files": [
+        "astropy/modeling/separable.py"
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-14182",
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "predicted_files": [
+        "astropy/io/ascii/rst.py",
+        "astropy/io/ascii/ui.py",
+        "astropy/io/ascii/connect.py",
+        "astropy/io/ascii/core.py"
+      ],
+      "gold_files": [
+        "astropy/io/ascii/rst.py"
+      ],
+      "correct_files": [
+        "astropy/io/ascii/rst.py"
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-14365",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "astropy/io/ascii/qdp.py",
+        "astropy/io/ascii/core.py",
+        "astropy/io/ascii/docs.py",
+        "astropy/io/ascii/basic.py",
+        "astropy/io/ascii/sextractor.py"
+      ],
+      "gold_files": [
+        "astropy/io/ascii/qdp.py"
+      ],
+      "correct_files": [
+        "astropy/io/ascii/qdp.py"
+      ]
+    },
+    {
+      "instance_id": "astropy__astropy-14995",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "astropy/nddata/nddata_withmixins.py",
+        "astropy/nddata/nddata.py",
+        "astropy/nddata/mixins/ndarithmetic.py",
+        "astropy/nddata/nduncertainty.py",
+        "astropy/nddata/bitmask.py"
+      ],
+      "gold_files": [
+        "astropy/nddata/mixins/ndarithmetic.py"
+      ],
+      "correct_files": [
+        "astropy/nddata/mixins/ndarithmetic.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-10914",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "django/conf/global_settings.py",
+        "django/core/files/uploadedfile.py",
+        "django/core/files/storage.py",
+        "django/core/files/uploadhandler.py",
+        "django/core/files/temp.py"
+      ],
+      "gold_files": [
+        "django/conf/global_settings.py"
+      ],
+      "correct_files": [
+        "django/conf/global_settings.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11099",
+      "precision": 1.0,
+      "recall": 2.0,
+      "f1": 1.3333333333333333,
+      "predicted_files": [
+        "django/contrib/auth/validators.py",
+        "django/contrib/auth/validators.py"
+      ],
+      "gold_files": [
+        "django/contrib/auth/validators.py"
+      ],
+      "correct_files": [
+        "django/contrib/auth/validators.py",
+        "django/contrib/auth/validators.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11133",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "django/http/response.py",
+        "django/http/__init__.py",
+        "django/core/serializers/json.py",
+        "django/core/serializers/base.py",
+        "django/core/serializers/__init__.py"
+      ],
+      "gold_files": [
+        "django/http/response.py"
+      ],
+      "correct_files": [
+        "django/http/response.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11179",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "django/db/models/deletion.py",
+        "django/db/models/base.py",
+        "django/db/models/manager.py",
+        "django/db/models/query.py",
+        "django/db/models/fields/related.py"
+      ],
+      "gold_files": [
+        "django/db/models/deletion.py"
+      ],
+      "correct_files": [
+        "django/db/models/deletion.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11815",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "predicted_files": [
+        "django/contrib/flatpages/models.py",
+        "django/contrib/flatpages/migrations/0001_initial.py"
+      ],
+      "gold_files": [
+        "django/db/migrations/serializer.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11848",
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "predicted_files": [
+        "django/utils/http.py",
+        "django/utils/dateparse.py",
+        "django/utils/timezone.py",
+        "django/utils/formats.py"
+      ],
+      "gold_files": [
+        "django/utils/http.py"
+      ],
+      "correct_files": [
+        "django/utils/http.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-11964",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "predicted_files": [
+        "django/db/models/fields/__init__.py",
+        "django/db/models/fields/related.py",
+        "django/db/models/fields/related_descriptors.py",
+        "django/db/models/fields/related_lookups.py"
+      ],
+      "gold_files": [
+        "django/db/models/enums.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-11999",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "django/db/models/fields/related.py",
+        "django/db/models/fields/__init__.py",
+        "django/db/models/base.py",
+        "django/db/models/options.py",
+        "django/db/models/query.py"
+      ],
+      "gold_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "correct_files": [
+        "django/db/models/fields/__init__.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-12125",
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.33333333333333337,
+      "predicted_files": [
+        "django/db/migrations/operations/models.py",
+        "django/db/migrations/autodetector.py",
+        "django/db/migrations/serializer.py",
+        "django/db/migrations/executor.py",
+        "django/db/migrations/loader.py"
+      ],
+      "gold_files": [
+        "django/db/migrations/serializer.py"
+      ],
+      "correct_files": [
+        "django/db/migrations/serializer.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-12308",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "predicted_files": [
+        "django/contrib/admin/utils.py",
+        "django/contrib/admin/models.py",
+        "django/contrib/admin/forms.py"
+      ],
+      "gold_files": [
+        "django/contrib/admin/utils.py"
+      ],
+      "correct_files": [
+        "django/contrib/admin/utils.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-12708",
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "predicted_files": [
+        "django/db/backends/base/schema.py",
+        "django/db/migrations/operations/fields.py",
+        "django/db/migrations/operations/models.py",
+        "django/db/migrations/operations/__init__.py"
+      ],
+      "gold_files": [
+        "django/db/backends/base/schema.py"
+      ],
+      "correct_files": [
+        "django/db/backends/base/schema.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-13028",
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "predicted_files": [
+        "django/db/models/query.py",
+        "django/db/models/sql/query.py",
+        "django/db/models/fields/related.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "gold_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "correct_files": [
+        "django/db/models/sql/query.py"
+      ]
+    },
+    {
+      "instance_id": "django__django-13033",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "predicted_files": [
+        "django/db/models/query.py",
+        "django/db/models/fields/related.py",
+        "django/db/models/options.py",
+        "django/db/models/fields/related_descriptors.py",
+        "django/db/models/fields/related_lookups.py"
+      ],
+      "gold_files": [
+        "django/db/models/sql/compiler.py"
+      ],
+      "correct_files": []
+    },
+    {
+      "instance_id": "django__django-13158",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "predicted_files": [
+        "django/db/models/query.py",
+        "django/db/models/fields/related.py",
+        "django/forms/models.py",
+        "django/forms/widgets.py",
+        "django/contrib/admin/forms.py"
+      ],
+      "gold_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "correct_files": []
+    }
+  ]
+}

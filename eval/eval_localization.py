@@ -87,8 +87,16 @@ def compute_metrics(predictions, gold_standards):
 
 def main():
     parser = argparse.ArgumentParser(description='Compare file retrieval predictions with gold standard')
-    parser.add_argument('--predictions', default='/home/dhruvgu2/Agentless/results/swe-bench-lite/file_level/loc_outputs.jsonl', help='Path to predictions JSONL file')
-    parser.add_argument('--output', default='./results/retrieval_metrics_gpt4o_desc.json', help='Output JSON file path')
+    parser.add_argument('--predictions', 
+                        # default='/home/dhruvgu2/Agentless/results_llama8b_gpt4o_descriptions_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
+                        # default='/home/dhruvgu2/Agentless/results_gpt4o_baseline_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
+                        default='/home/dhruvgu2/Agentless/results_gpt4o_descriptions_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
+                        help='Path to predictions JSONL file')
+    parser.add_argument('--output', 
+                        # default='./orig_results/retrieval_metrics_with_desc_llama8b_gpt4o.json', 
+                        # default='./orig_results/retrieval_metrics_gpt4o_baseline.json', 
+                        default='./orig_results/retrieval_metrics_gpt4o_desc.json', 
+                        help='Output JSON file path')
     parser.add_argument('--num_samples', type=int, default=50, help='Number of samples to use from the dataset')
     args = parser.parse_args()
     
@@ -96,9 +104,9 @@ def main():
     predictions_data = load_jsonl(args.predictions)
     
     # Load SWE-bench_Verified from Hugging Face datasets
-    print("Loading SWE-bench_Verified dataset from Hugging Face...")
-    gold_dataset = datasets.load_dataset("princeton-nlp/SWE-bench_Verified")
-    gold_data = gold_dataset['test'].select(range(min(args.num_samples, len(gold_dataset['test']))))
+    print("Loading SWE-bench_Lite dataset from Hugging Face...")
+    gold_dataset = datasets.load_dataset("princeton-nlp/SWE-bench_Lite")
+    gold_data = gold_dataset['test']
     
     # Extract predictions
     predictions = {}
