@@ -13,6 +13,7 @@ from agentless.util.preprocess_data import (
     line_wrap_content,
     show_project_structure,
 )
+from agentless.util.model import make_model
 
 MAX_CONTEXT_LENGTH = 128000
 
@@ -305,15 +306,16 @@ Return just the locations wrapped with ```.
         self.descriptions = descriptions
 
         # Short Description Model 
-        from agentless.util.model import make_model
-        self.desc_model = make_model(
-            model=self.model_name,
-            backend=self.backend,
-            logger=self.logger,
-            max_tokens=100,  # Short description
-            temperature=0,
-            batch_size=1,
-        )
+        # Hard-coded llama model for descriptions!
+        if self.descriptions:
+            self.desc_model = make_model(
+                model='meta-llama/Llama-3.1-8B-Instruct', # Instruct models work best
+                backend='huggingface',
+                logger=self.logger,
+                max_tokens=100,  # Short description
+                temperature=0,
+                batch_size=1,
+            )
         
     def _get_file_description_cache_key(self, repo, file_path):
         """Generate a unique key for caching file descriptions."""

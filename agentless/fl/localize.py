@@ -443,8 +443,8 @@ def localize(args):
 
     # Use only subset of examples if the flag is set
     if args.use_subset:
-        # Take first 5 examples
-        swe_bench_data = swe_bench_data.select(range(min(5, len(swe_bench_data))))
+        # Take first 50 examples
+        swe_bench_data = swe_bench_data.select(range(min(50, len(swe_bench_data))))
         print(f"Running on a subset of {len(swe_bench_data)} examples")
 
     start_file_locs = load_jsonl(args.start_file) if args.start_file else None
@@ -617,13 +617,13 @@ def main():
     parser.add_argument(
         "--use_subset", 
         action="store_true", 
-        help="Use only a subset of 5 examples from the dataset"
+        help="Use only a subset of 50 examples from the dataset"
     )
 
     args = parser.parse_args()
     print("Using Descriptions: ", args.descriptions)
     if args.use_subset:
-        print("Running on a subset of 5 examples")
+        print("Running on a subset of 50 examples")
     args.output_file = os.path.join(args.output_folder, args.output_file)
     check_valid_args(args)
 
