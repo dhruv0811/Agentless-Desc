@@ -184,7 +184,6 @@ dev/
 
 # data files
 *.jsonl
-*.json
 
 # Jupyter Notebooks
 *.ipynb
