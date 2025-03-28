@@ -309,10 +309,10 @@ Return just the locations wrapped with ```.
         # Hard-coded llama model for descriptions!
         if self.descriptions:
             self.desc_model = make_model(
-                # model='meta-llama/Llama-3.1-8B-Instruct', # Instruct models work best
-                model=model_name,
-                # backend='huggingface',
-                backend=backend,
+                model='meta-llama/Llama-3.1-8B-Instruct', # Instruct models work best
+                # model=model_name,
+                backend='huggingface',
+                # backend=backend,
                 logger=self.logger,
                 max_tokens=100,  # Short description
                 temperature=0,
