@@ -9,6 +9,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "astropy/modeling/separable.py",
         "astropy/modeling/models.py",
@@ -27,6 +28,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "astropy/io/ascii/rst.py",
         "astropy/io/ascii/core.py",
@@ -46,6 +48,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "astropy/io/ascii/qdp.py",
         "astropy/io/ascii/core.py",
@@ -65,6 +68,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "astropy/nddata/nddata.py",
         "astropy/nddata/nddata_base.py",
@@ -84,6 +88,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "astropy/io/fits/fitsrec.py",
         "astropy/io/fits/__init__.py",
@@ -103,6 +108,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "astropy/wcs/wcs.py",
         "astropy/wcs/utils.py",
@@ -122,6 +128,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/core/files/storage.py",
         "django/core/files/uploadhandler.py",
@@ -141,6 +148,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/fields/files.py",
         "django/db/migrations/operations/fields.py",
@@ -160,6 +168,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/db/backends/mysql/compiler.py"
       ],
@@ -173,6 +182,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/forms/widgets.py",
         "django/forms/forms.py",
@@ -192,6 +202,7 @@
       "precision": 0.5,
       "recall": 1.0,
       "f1": 0.6666666666666666,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/core/management/commands/sqlmigrate.py",
         "django/db/backends/base/features.py"
@@ -208,6 +219,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/forms/fields.py",
         "django/utils/duration.py",
@@ -225,6 +237,7 @@
       "precision": 1.0,
       "recall": 2.0,
       "f1": 1.3333333333333333,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/contrib/auth/validators.py",
         "django/contrib/auth/validators.py"
@@ -242,6 +255,7 @@
       "precision": 0.5,
       "recall": 1.0,
       "f1": 0.6666666666666666,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/http/response.py",
         "django/utils/http.py"
@@ -258,6 +272,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/deletion.py",
         "django/db/models/base.py",
@@ -277,6 +292,7 @@
       "precision": 0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/auth/migrations/0011_update_proxy_permissions.py"
@@ -288,6 +304,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/utils/autoreload.py",
         "django/core/management/commands/runserver.py",
@@ -306,6 +323,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/contrib/staticfiles/storage.py",
         "django/conf/global_settings.py",
@@ -322,6 +340,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/utils/autoreload.py",
         "django/core/management/commands/runserver.py",
@@ -340,6 +359,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/urls/converters.py",
         "django/urls/exceptions.py",
@@ -357,6 +377,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/contrib/contenttypes/models.py",
         "django/contrib/auth/models.py",
@@ -374,6 +395,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/fields/__init__.py",
         "django/core/checks/model_checks.py",
@@ -392,6 +414,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/contrib/auth/models.py",
         "django/db/utils.py",
@@ -407,6 +430,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/forms/models.py"
       ],
@@ -420,6 +444,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/utils/http.py",
         "django/utils/dates.py",
@@ -438,6 +463,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/lookups.py",
         "django/db/models/query.py",
@@ -457,6 +483,7 @@
       "precision": 0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/autodetector.py"
@@ -468,6 +495,7 @@
       "precision": 0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/enums.py"
@@ -479,6 +507,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/base.py",
         "django/db/models/fields/__init__.py",
@@ -497,6 +526,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/contrib/auth/models.py",
         "django/contrib/auth/base_user.py",
@@ -513,6 +543,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/migrations/operations/models.py",
         "django/db/migrations/serializer.py",
@@ -531,6 +562,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/urls/conf.py"
       ],
@@ -544,6 +576,7 @@
       "precision": 0.25,
       "recall": 1.0,
       "f1": 0.4,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/base.py",
         "django/db/models/fields/related.py",
@@ -562,6 +595,7 @@
       "precision": 0.5,
       "recall": 1.0,
       "f1": 0.6666666666666666,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/core/checks/translation.py",
         "django/conf/global_settings.py"
@@ -578,6 +612,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/contrib/admin/utils.py",
         "django/contrib/admin/forms.py",
@@ -597,6 +632,7 @@
       "precision": 0.75,
       "recall": 3.0,
       "f1": 1.2,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/backends/base/creation.py",
         "django/db/transaction.py",
@@ -617,6 +653,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/db/models/options.py",
         "django/db/models/query.py",
@@ -634,6 +671,7 @@
       "precision": 0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/fields/related.py"
@@ -645,6 +683,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/backends/postgresql/operations.py",
         "django/db/models/sql/compiler.py",
@@ -664,6 +703,7 @@
       "precision": 1.0,
       "recall": 2.0,
       "f1": 1.3333333333333333,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/views/debug.py",
         "django/views/debug.py"
@@ -681,6 +721,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/backends/base/schema.py",
         "django/db/migrations/operations/models.py",
@@ -700,6 +741,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/deletion.py",
         "django/db/models/query.py",
@@ -719,6 +761,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/migrations/autodetector.py",
         "django/db/models/constraints.py",
@@ -738,6 +781,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/db/models/sql/compiler.py",
         "django/db/models/query.py",
@@ -757,6 +801,7 @@
       "precision": 0.4,
       "recall": 2.0,
       "f1": 0.6666666666666667,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/contrib/staticfiles/handlers.py",
         "django/core/handlers/asgi.py",
@@ -777,6 +822,7 @@
       "precision": 1.0,
       "recall": 1.0,
       "f1": 1.0,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/utils/text.py"
       ],
@@ -792,6 +838,7 @@
       "precision": 0.2,
       "recall": 1.0,
       "f1": 0.33333333333333337,
+      "accuracy": 1.0,
       "predicted_files": [
         "django/contrib/admin/models.py",
         "django/contrib/admin/checks.py",
@@ -811,6 +858,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/db/models/query.py",
         "django/db/models/fields/related.py",
@@ -828,6 +876,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [
         "django/forms/forms.py",
         "django/db/models/fields/related.py",
@@ -844,6 +893,7 @@
       "precision": 0,
       "recall": 0.0,
       "f1": 0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/exceptions.py"
@@ -855,6 +905,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/syndication/views.py"
@@ -866,6 +917,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/autodetector.py"
@@ -877,6 +929,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/models.py"
@@ -888,6 +941,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/sessions/backends/base.py"
@@ -899,6 +953,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/fields/__init__.py"
@@ -910,6 +965,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/admin/sites.py"
@@ -921,6 +977,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/backends/base/creation.py"
@@ -932,6 +989,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/auth/tokens.py"
@@ -943,6 +1001,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/sql/query.py"
@@ -954,6 +1013,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/management/__init__.py"
@@ -965,6 +1025,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/management/commands/shell.py"
@@ -976,6 +1037,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/admin/options.py"
@@ -987,6 +1049,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/fields/json.py"
@@ -998,6 +1061,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/dispatch/dispatcher.py"
@@ -1009,6 +1073,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/base.py"
@@ -1020,6 +1085,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/models.py"
@@ -1031,6 +1097,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/base.py"
@@ -1042,6 +1109,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/query_utils.py"
@@ -1053,6 +1121,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/query_utils.py"
@@ -1064,6 +1133,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/urls/resolvers.py"
@@ -1075,6 +1145,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/fields/__init__.py"
@@ -1086,6 +1157,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/management/templates.py"
@@ -1097,6 +1169,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/auth/forms.py"
@@ -1108,6 +1181,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/boundfield.py"
@@ -1119,6 +1193,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/serializer.py"
@@ -1130,6 +1205,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/formsets.py"
@@ -1141,6 +1217,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/sql/query.py"
@@ -1152,6 +1229,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/fields/reverse_related.py"
@@ -1163,6 +1241,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/fields/related.py"
@@ -1174,6 +1253,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/admin/views/autocomplete.py"
@@ -1185,6 +1265,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/utils/decorators.py"
@@ -1196,6 +1277,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/admin/helpers.py"
@@ -1207,6 +1289,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/models.py"
@@ -1218,6 +1301,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/backends/ddl_references.py"
@@ -1229,6 +1313,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/operations/models.py"
@@ -1240,6 +1325,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/widgets.py"
@@ -1251,6 +1337,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/validators.py"
@@ -1262,6 +1349,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/fields/__init__.py"
@@ -1273,6 +1361,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/executor.py"
@@ -1284,6 +1373,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/expressions.py"
@@ -1295,6 +1385,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/messages/storage/cookie.py"
@@ -1306,6 +1397,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/template/autoreload.py"
@@ -1317,6 +1409,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/utils/functional.py"
@@ -1328,6 +1421,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/views/static.py"
@@ -1339,6 +1433,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/operations/models.py"
@@ -1350,6 +1445,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/autodetector.py"
@@ -1361,6 +1457,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/management/base.py"
@@ -1372,6 +1469,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/utils/html.py"
@@ -1383,6 +1481,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/checks/templates.py"
@@ -1394,6 +1493,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/sql/query.py"
@@ -1405,6 +1505,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/management/commands/inspectdb.py"
@@ -1416,6 +1517,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/backends/postgresql/client.py"
@@ -1427,6 +1529,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/formsets.py"
@@ -1438,6 +1541,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/serializer.py"
@@ -1449,6 +1553,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/formsets.py"
@@ -1460,6 +1565,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/utils/numberformat.py"
@@ -1471,6 +1577,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/auth/forms.py"
@@ -1482,6 +1589,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/forms/boundfield.py"
@@ -1493,6 +1601,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/sitemaps/__init__.py"
@@ -1504,6 +1613,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/core/cache/backends/filebased.py"
@@ -1515,6 +1625,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/auth/management/__init__.py"
@@ -1526,6 +1637,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/sql/compiler.py"
@@ -1537,6 +1649,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/admin/templatetags/admin_modify.py"
@@ -1548,6 +1661,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/operations/fields.py"
@@ -1559,6 +1673,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/contrib/admin/checks.py"
@@ -1570,6 +1685,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/operations/models.py"
@@ -1581,6 +1697,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/template/defaultfilters.py"
@@ -1592,6 +1709,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/sql/query.py"
@@ -1603,6 +1721,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/models/query.py"
@@ -1614,6 +1733,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "django/db/migrations/serializer.py"
@@ -1625,6 +1745,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/__init__.py"
@@ -1636,6 +1757,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/widgets.py"
@@ -1647,6 +1769,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/artist.py"
@@ -1658,6 +1781,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/__init__.py"
@@ -1669,6 +1793,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/mpl_toolkits/mplot3d/axes3d.py"
@@ -1680,6 +1805,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/figure.py"
@@ -1691,6 +1817,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/mpl_toolkits/mplot3d/art3d.py"
@@ -1702,6 +1829,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/mpl_toolkits/mplot3d/art3d.py"
@@ -1713,6 +1841,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/legend.py"
@@ -1724,6 +1853,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/backends/backend_ps.py"
@@ -1735,6 +1865,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/figure.py"
@@ -1746,6 +1877,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/axes/_axes.py"
@@ -1757,6 +1889,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/style/core.py"
@@ -1768,6 +1901,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/axis.py"
@@ -1779,6 +1913,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/colors.py"
@@ -1790,6 +1925,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/colors.py"
@@ -1801,6 +1937,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/offsetbox.py"
@@ -1812,6 +1949,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/cbook.py"
@@ -1823,6 +1961,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/figure.py"
@@ -1834,6 +1973,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/offsetbox.py"
@@ -1845,6 +1985,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/colorbar.py"
@@ -1856,6 +1997,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/matplotlib/axis.py"
@@ -1867,6 +2009,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "lib/mpl_toolkits/axes_grid1/axes_grid.py"
@@ -1878,6 +2021,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "seaborn/_oldcore.py"
@@ -1889,6 +2033,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "seaborn/_stats/regression.py"
@@ -1900,6 +2045,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "seaborn/_core/scales.py"
@@ -1911,6 +2057,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "seaborn/axisgrid.py"
@@ -1922,6 +2069,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/flask/blueprints.py"
@@ -1933,6 +2081,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/flask/config.py"
@@ -1944,6 +2093,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/flask/cli.py"
@@ -1955,6 +2105,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "requests/sessions.py"
@@ -1966,6 +2117,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "requests/models.py"
@@ -1977,6 +2129,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "requests/sessions.py"
@@ -1988,6 +2141,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "requests/adapters.py"
@@ -1999,6 +2153,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "requests/utils.py"
@@ -2010,6 +2165,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "requests/models.py"
@@ -2021,6 +2177,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "xarray/core/concat.py"
@@ -2032,6 +2189,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "xarray/core/dataarray.py"
@@ -2043,6 +2201,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "xarray/core/formatting.py"
@@ -2054,6 +2213,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "xarray/core/variable.py"
@@ -2065,6 +2225,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "xarray/core/groupby.py"
@@ -2076,6 +2237,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "pylint/checkers/misc.py"
@@ -2087,6 +2249,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "pylint/config/config_initialization.py"
@@ -2098,6 +2261,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "pylint/lint/expand_modules.py"
@@ -2109,6 +2273,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "pylint/lint/expand_modules.py"
@@ -2120,6 +2285,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "pylint/config/argument.py"
@@ -2131,6 +2297,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "pylint/reporters/text.py"
@@ -2142,6 +2309,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/assertion/rewrite.py"
@@ -2153,6 +2321,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/pathlib.py"
@@ -2164,6 +2333,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/assertion/rewrite.py"
@@ -2175,6 +2345,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/python.py"
@@ -2186,6 +2357,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/logging.py"
@@ -2197,6 +2369,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/_code/code.py"
@@ -2208,6 +2381,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/assertion/util.py"
@@ -2219,6 +2393,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/junitxml.py"
@@ -2230,6 +2405,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/main.py"
@@ -2241,6 +2417,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/_io/saferepr.py"
@@ -2252,6 +2429,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/nodes.py"
@@ -2263,6 +2441,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/mark/evaluate.py"
@@ -2274,6 +2453,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/skipping.py"
@@ -2285,6 +2465,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/skipping.py"
@@ -2296,6 +2477,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/tmpdir.py"
@@ -2307,6 +2489,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/python.py"
@@ -2318,6 +2501,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "src/_pytest/_code/source.py"
@@ -2329,6 +2513,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/linear_model/ridge.py"
@@ -2340,6 +2525,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/preprocessing/label.py"
@@ -2351,6 +2537,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/utils/validation.py"
@@ -2362,6 +2549,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/neighbors/base.py"
@@ -2373,6 +2561,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/mixture/base.py"
@@ -2384,6 +2573,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/preprocessing/_encoders.py"
@@ -2395,6 +2585,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/mixture/base.py"
@@ -2406,6 +2597,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/decomposition/kernel_pca.py"
@@ -2417,6 +2609,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/pipeline.py"
@@ -2428,6 +2621,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/ensemble/iforest.py"
@@ -2439,6 +2633,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/feature_selection/mutual_info_.py"
@@ -2450,6 +2645,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/utils/_pprint.py"
@@ -2461,6 +2657,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/ensemble/voting.py"
@@ -2472,6 +2669,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/linear_model/logistic.py"
@@ -2483,6 +2681,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/neighbors/nca.py"
@@ -2494,6 +2693,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/svm/base.py"
@@ -2505,6 +2705,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/model_selection/_split.py"
@@ -2516,6 +2717,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/cluster/_affinity_propagation.py"
@@ -2527,6 +2729,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/metrics/cluster/_supervised.py"
@@ -2538,6 +2741,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/isotonic.py"
@@ -2549,6 +2753,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/compose/_column_transformer.py"
@@ -2560,6 +2765,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/utils/multiclass.py"
@@ -2571,6 +2777,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sklearn/utils/_set_output.py"
@@ -2582,6 +2789,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/autodoc/__init__.py"
@@ -2593,6 +2801,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/autodoc/typehints.py"
@@ -2604,6 +2813,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/util/rst.py"
@@ -2615,6 +2825,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/autosummary/generate.py"
@@ -2626,6 +2837,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/napoleon/docstring.py"
@@ -2637,6 +2849,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/environment/adapters/indexentries.py"
@@ -2648,6 +2861,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/builders/manpage.py"
@@ -2659,6 +2873,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/autodoc/__init__.py"
@@ -2670,6 +2885,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/autodoc/__init__.py"
@@ -2681,6 +2897,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/domains/std.py"
@@ -2692,6 +2909,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/domains/std.py"
@@ -2703,6 +2921,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/autodoc/__init__.py"
@@ -2714,6 +2933,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/util/typing.py"
@@ -2725,6 +2945,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/napoleon/docstring.py"
@@ -2736,6 +2957,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/viewcode.py"
@@ -2747,6 +2969,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sphinx/ext/autodoc/importer.py"
@@ -2758,6 +2981,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/ccode.py"
@@ -2769,6 +2993,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/functions/elementary/trigonometric.py"
@@ -2780,6 +3005,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/latex.py"
@@ -2791,6 +3017,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/mathematica.py"
@@ -2802,6 +3029,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/polys/domains/polynomialring.py"
@@ -2813,6 +3041,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/expressions/matexpr.py"
@@ -2824,6 +3053,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/matrices.py"
@@ -2835,6 +3065,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/combinatorics/permutations.py"
@@ -2846,6 +3077,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/sparse.py"
@@ -2857,6 +3089,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/integrals/intpoly.py"
@@ -2868,6 +3101,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/operations.py"
@@ -2879,6 +3113,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/mod.py"
@@ -2890,6 +3125,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/functions/combinatorial/numbers.py"
@@ -2901,6 +3137,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/numbers.py"
@@ -2912,6 +3149,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/functions/elementary/hyperbolic.py"
@@ -2923,6 +3161,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/common.py"
@@ -2934,6 +3173,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/common.py"
@@ -2945,6 +3185,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/numbers.py"
@@ -2956,6 +3197,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/mul.py"
@@ -2967,6 +3209,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/latex.py"
@@ -2978,6 +3221,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/numbers.py"
@@ -2989,6 +3233,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/pretty/pretty.py"
@@ -3000,6 +3245,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/latex.py"
@@ -3011,6 +3257,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/polys/polyoptions.py"
@@ -3022,6 +3269,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/latex.py"
@@ -3033,6 +3281,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/pretty/pretty.py"
@@ -3044,6 +3293,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/utilities/lambdify.py"
@@ -3055,6 +3305,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/latex.py"
@@ -3066,6 +3317,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/mathematica.py"
@@ -3077,6 +3329,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/simplify/trigsimp.py"
@@ -3088,6 +3341,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/latex.py"
@@ -3099,6 +3353,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/geometry/util.py"
@@ -3110,6 +3365,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/mathml.py"
@@ -3121,6 +3377,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/pretty/pretty.py"
@@ -3132,6 +3389,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/pretty/pretty.py"
@@ -3143,6 +3401,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/utilities/codegen.py"
@@ -3154,6 +3413,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/sets/sets.py"
@@ -3165,6 +3425,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/pycode.py"
@@ -3176,6 +3437,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/simplify/fu.py"
@@ -3187,6 +3449,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/expressions/matexpr.py"
@@ -3198,6 +3461,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/geometry/point.py"
@@ -3209,6 +3473,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/expr.py"
@@ -3220,6 +3485,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/exprtools.py"
@@ -3231,6 +3497,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/solvers/diophantine.py"
@@ -3242,6 +3509,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/ntheory/residue_ntheory.py"
@@ -3253,6 +3521,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/basic.py"
@@ -3264,6 +3533,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/expressions/blockmatrix.py"
@@ -3275,6 +3545,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/polys/polytools.py"
@@ -3286,6 +3557,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/utilities/iterables.py"
@@ -3297,6 +3569,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/matrices/expressions/blockmatrix.py"
@@ -3308,6 +3581,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/polys/factortools.py"
@@ -3319,6 +3593,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/functions/elementary/complexes.py"
@@ -3330,6 +3605,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/physics/vector/point.py"
@@ -3341,6 +3617,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/utilities/iterables.py"
@@ -3352,6 +3629,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/power.py"
@@ -3363,6 +3641,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/mul.py"
@@ -3374,6 +3653,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/physics/units/util.py"
@@ -3385,6 +3665,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/_print_helpers.py"
@@ -3396,6 +3677,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/pretty/pretty.py"
@@ -3407,6 +3689,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/assumptions/refine.py"
@@ -3418,6 +3701,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/latex.py"
@@ -3429,6 +3713,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/mod.py"
@@ -3440,6 +3725,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/str.py"
@@ -3451,6 +3737,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/core/function.py"
@@ -3462,6 +3749,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/functions/elementary/complexes.py"
@@ -3473,6 +3761,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/polys/monomials.py"
@@ -3484,6 +3773,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/solvers/polysys.py"
@@ -3495,6 +3785,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/geometry/point.py"
@@ -3506,6 +3797,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/simplify/cse_main.py"
@@ -3517,6 +3809,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/tensor/array/ndim_array.py"
@@ -3528,6 +3821,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/printing/pretty/pretty.py"
@@ -3539,6 +3833,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/utilities/lambdify.py"
@@ -3550,6 +3845,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/physics/units/unitsystem.py"
@@ -3561,6 +3857,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/parsing/mathematica.py"
@@ -3572,6 +3869,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/physics/quantum/tensorproduct.py"
@@ -3583,6 +3881,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/physics/units/unitsystem.py"
@@ -3594,6 +3893,7 @@
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0.0,
+      "accuracy": 0.0,
       "predicted_files": [],
       "gold_files": [
         "sympy/physics/units/prefixes.py"
@@ -3601,10 +3901,13 @@
       "correct_files": []
     }
   ],
+  "total_perfect_matches": 33,
   "macro_precision": 0.036833333333333336,
   "macro_recall": 0.12666666666666668,
   "macro_f1": 0.054666666666666676,
+  "macro_accuracy": 0.11,
   "micro_precision": 0.2111111111111111,
   "micro_recall": 0.12666666666666668,
-  "micro_f1": 0.15833333333333333
+  "micro_f1": 0.15833333333333333,
+  "accuracy": 0.11
 }

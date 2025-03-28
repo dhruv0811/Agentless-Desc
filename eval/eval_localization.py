@@ -25,14 +25,15 @@ def load_jsonl(file_path):
     return data
 
 def compute_metrics(predictions, gold_standards):
-    """Compute precision, recall, F1 score for file retrieval"""
+    """Compute precision, recall, F1 score, and accuracy for file retrieval"""
     results = {}
     all_metrics = {
         'total_instances': len(gold_standards),
         'total_predictions': 0,
         'total_gold_files': 0,
         'total_correct': 0,
-        'instance_metrics': []
+        'instance_metrics': [],
+        'total_perfect_matches': 0  # Count instances where all gold files are found
     }
     
     for instance_id, gold_files in gold_standards.items():
@@ -43,6 +44,7 @@ def compute_metrics(predictions, gold_standards):
                 'precision': 0.0,
                 'recall': 0.0,
                 'f1': 0.0,
+                'accuracy': 0.0,  
                 'predicted_files': [],
                 'gold_files': gold_files,
                 'correct_files': []
@@ -59,11 +61,19 @@ def compute_metrics(predictions, gold_standards):
         recall = len(correct_files) / len(gold_files) if gold_files else 0
         f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
         
+        # Calculate accuracy (1 if all gold files are in predictions, 0 otherwise)
+        all_found = all(gold_file in pred_files for gold_file in gold_files)
+        accuracy = 1.0 if all_found else 0.0
+        
+        if all_found:
+            all_metrics['total_perfect_matches'] += 1
+        
         instance_result = {
             'instance_id': instance_id,
             'precision': precision,
             'recall': recall,
             'f1': f1,
+            'accuracy': accuracy,  # Add accuracy to instance metrics
             'predicted_files': pred_files,
             'gold_files': gold_files,
             'correct_files': correct_files
@@ -78,24 +88,28 @@ def compute_metrics(predictions, gold_standards):
     all_metrics['macro_precision'] = sum(inst['precision'] for inst in all_metrics['instance_metrics']) / len(all_metrics['instance_metrics'])
     all_metrics['macro_recall'] = sum(inst['recall'] for inst in all_metrics['instance_metrics']) / len(all_metrics['instance_metrics'])
     all_metrics['macro_f1'] = sum(inst['f1'] for inst in all_metrics['instance_metrics']) / len(all_metrics['instance_metrics'])
+    all_metrics['macro_accuracy'] = sum(inst['accuracy'] for inst in all_metrics['instance_metrics']) / len(all_metrics['instance_metrics'])
     
     all_metrics['micro_precision'] = all_metrics['total_correct'] / all_metrics['total_predictions'] if all_metrics['total_predictions'] > 0 else 0
     all_metrics['micro_recall'] = all_metrics['total_correct'] / all_metrics['total_gold_files'] if all_metrics['total_gold_files'] > 0 else 0
     all_metrics['micro_f1'] = 2 * all_metrics['micro_precision'] * all_metrics['micro_recall'] / (all_metrics['micro_precision'] + all_metrics['micro_recall']) if (all_metrics['micro_precision'] + all_metrics['micro_recall']) > 0 else 0
+    
+    # Overall accuracy is the percentage of instances where all gold files were found
+    all_metrics['accuracy'] = all_metrics['total_perfect_matches'] / all_metrics['total_instances'] if all_metrics['total_instances'] > 0 else 0
     
     return all_metrics
 
 def main():
     parser = argparse.ArgumentParser(description='Compare file retrieval predictions with gold standard')
     parser.add_argument('--predictions', 
-                        # default='/home/dhruvgu2/Agentless/results_llama8b_gpt4o_descriptions_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
+                        default='/home/dhruvgu2/Agentless/results_llama8b_gpt4o_descriptions_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
                         # default='/home/dhruvgu2/Agentless/results_gpt4o_baseline_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
-                        default='/home/dhruvgu2/Agentless/results_gpt4o_descriptions_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
+                        # default='/home/dhruvgu2/Agentless/results_gpt4o_descriptions_50/swe-bench-lite/file_level/loc_outputs.jsonl', 
                         help='Path to predictions JSONL file')
     parser.add_argument('--output', 
-                        # default='./orig_results/retrieval_metrics_with_desc_llama8b_gpt4o.json', 
+                        default='./orig_results/retrieval_metrics_with_desc_llama8b_gpt4o.json', 
                         # default='./orig_results/retrieval_metrics_gpt4o_baseline.json', 
-                        default='./orig_results/retrieval_metrics_gpt4o_desc.json', 
+                        # default='./orig_results/retrieval_metrics_gpt4o_desc.json', 
                         help='Output JSON file path')
     parser.add_argument('--num_samples', type=int, default=50, help='Number of samples to use from the dataset')
     args = parser.parse_args()
@@ -140,6 +154,7 @@ def main():
     print(f"Macro-Precision: {metrics['macro_precision']:.4f}")
     print(f"Macro-Recall: {metrics['macro_recall']:.4f}")
     print(f"Macro-F1: {metrics['macro_f1']:.4f}")
+    print(f"Accuracy (% of instances with all gold files found): {metrics['accuracy']:.4f}")
     print(f"Detailed results saved to {args.output}")
 
 if __name__ == "__main__":
