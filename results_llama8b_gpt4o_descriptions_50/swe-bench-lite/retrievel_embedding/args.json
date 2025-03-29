@@ -1,0 +1,16 @@
+{
+    "output_folder": "results_llama8b_gpt4o_descriptions_50/swe-bench-lite/retrievel_embedding",
+    "output_file": "results_llama8b_gpt4o_descriptions_50/swe-bench-lite/retrievel_embedding/retrieve_locs.jsonl",
+    "index_type": "simple",
+    "filter_type": "given_files",
+    "filter_top_n": null,
+    "filter_file": "results_llama8b_gpt4o_descriptions_50/swe-bench-lite/file_level_irrelevant/loc_outputs.jsonl",
+    "chunk_size": 512,
+    "chunk_overlap": 0,
+    "persist_dir": "embedding/swe-bench_simple",
+    "target_id": null,
+    "mock": false,
+    "num_threads": 1,
+    "dataset": "princeton-nlp/SWE-bench_Lite",
+    "use_subset": true
+}
