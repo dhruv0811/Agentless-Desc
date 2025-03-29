@@ -406,6 +406,11 @@ def localize_instance(
 def localize_irrelevant(args):
     swe_bench_data = load_dataset(args.dataset, split="test")
     
+    if args.use_subset:
+        # Take first 50 examples
+        swe_bench_data = swe_bench_data.select(range(min(50, len(swe_bench_data))))
+        print(f"Running on a subset of {len(swe_bench_data)} examples")
+
     existing_instance_ids = (
         load_existing_instance_ids(args.output_file) if args.skip_existing else set()
     )

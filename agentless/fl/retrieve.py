@@ -98,6 +98,11 @@ def retrieve(args):
         found_files = []
 
     swe_bench_data = load_dataset(args.dataset, split="test")
+    if args.use_subset:
+        # Take first 50 examples
+        swe_bench_data = swe_bench_data.select(range(min(50, len(swe_bench_data))))
+        print(f"Running on a subset of {len(swe_bench_data)} examples")
+        
     prev_o = load_jsonl(args.output_file) if os.path.exists(args.output_file) else []
 
     if args.num_threads == 1:
@@ -159,6 +164,11 @@ def main():
         type=str,
         default="princeton-nlp/SWE-bench_Lite",
         choices=["princeton-nlp/SWE-bench_Lite", "princeton-nlp/SWE-bench_Verified"],
+    )
+    parser.add_argument(
+        "--use_subset", 
+        action="store_true", 
+        help="Use only a subset of 50 examples from the dataset"
     )
 
     args = parser.parse_args()
